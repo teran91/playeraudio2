@@ -1,0 +1,110 @@
+
+<!doctype html>
+<html lang="es">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="theme-color" content="#08298a">
+<title> RADIO PROYECCION</title>
+
+<link href="css/style.css" rel="stylesheet">
+<link href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/lunaradio-animado.js"></script>
+<style>
+html,body{font-family:"Open Sans",sans-serif;height:100%;margin:0;display:flex;flex-direction:column;color:#272829;}
+</style>
+</head>
+
+<body>
+<div style="height:100%">
+<button type="button" class="mobile-nav-toggle"><i class="fas fa-bars"></i></button>
+<header id="header">
+<nav class="nav-menu">
+<ul>
+<li><a target="_blank" href="https://api.whatsapp.com/send?phone=56978781300&amp;text=Hola,%20Porfavor%20precios%20sobre%20la%20publicidad"><i class="fas fa-bullhorn"></i><span>Publicidad</span></a></li>
+<li><a target="_blank" href="https://www.facebook.com/radioproyeccion100.1l"><i class="fab fa-facebook-square" alt="Facebook"></i>
+<span>Facebook</span></a></li>
+<li><a target="_blank" href="https://www.instagram.com/radioproyeccionlebu/"><i class="fab fa-instagram-square" alt="Instagram"></i>
+<span>Instagram</span></a></li>
+<li><a href="https://api.whatsapp.com/send?phone=56978781300&amp;text=Hola%20escucho%20la%20radio" target="_blank"><i class="fab fa-whatsapp-square" alt="Whatsapp"></i>
+<span>Whatsapp</span></a></li>
+<li><a target="_blank" href="#"><i class="fab fa-google-play"></i><span>Descargar app</span></a></li>
+</ul>
+</nav>
+</header>
+
+
+<div id="player"></div>
+<script>
+$("#player").lunaradio({
+userinterface: "big", 
+backgroundcolor: "rgba(9,15,25,0.6)",
+fontcolor: "#ffffff",
+hightlightcolor: "#b60c0f", 
+fontname: "Unica One",
+googlefont: "Unica+One&display=swap", 
+fontratio: "0.4", 
+radioname: "RADIO PROYECCION", //nombre de radio
+scroll: "true",
+autoplay: "true", 
+coverimage: "https://scontent.fccp1-1.fna.fbcdn.net/v/t39.30808-6/343043815_2123455181189395_7148373425905840456_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeH3e3oSVzv1tiKHMbd02bCnpUW8hR51QlylRbyFHnVCXH2DTIPcj9ypa59FoPmMUuYkt8_biiWeJdrCmT9DifJb&_nc_ohc=pbtzlGn2LvIQ7kNvgGo-bK_&_nc_ht=scontent.fccp1-1.fna&_nc_gid=AeMqnGLfSSsOaJkvq_FWrMO&oh=00_AYB3BQyl0H60YgwIE7NlDlZ4VR6vkFGk8o_zbe4h2E1dpg&oe=66F76498",
+onlycoverimage: "false", //true para mostrar solo logo radio
+coverstyle: "animated",//circle o square o hits1
+usevisualizer: "real", 
+visualizeropacity: "1.0",
+multicolorvisualizer: "true",
+color1: "#00FF00",
+color2: "#ffff00",
+color3: "#FF1F6F",
+color4: "#FF1F6F",
+visualizertype: "6", //Efecto de sondas 1, 2, 3, 4, 5, 6, 7, 8
+usestreamcorsproxy: "false", //true o false
+corsproxy: "", 
+streamurl:"https://stream.zeno.fm/atw3gs6canzuv", 
+streamtype: "icecast2", //shoutcast2, icecast2, radiozeno, radionomy, radiojar, radioco
+icecastmountpoint: "/live",
+shoutcastpath: "/stream",
+streamid: "1", 
+streamsuffix: "", 
+radionomyid: "", 
+radionomyapikey: "",
+radiojarid: "",  
+radiocoid: "",
+itunestoken: "1000lIPN",
+metadatainterval: "20000", 
+displayliveicon: "true",
+volume: "100",
+debug: "true",
+});
+</script>
+
+
+<div class="background_hora"><div id="relogio">15:00:05</div></div>
+<script>
+function reloj() {
+let elementoID = document.getElementById('relogio');
+let horalocal = new Date().toLocaleTimeString('es');
+elementoID.innerHTML = horalocal;
+}
+setInterval(reloj, 1000);
+</script>
+</div>
+
+
+<footer style="display:grid;align-content:end">
+<div style="background-color:#222;color:#fff;text-align:center;padding:10px"> 
+&copy; Copyright 2024 - <a href="https://www.radioproyeccion.cl/">RADIO PROYECCION 100.1 | SIEMPRE CONTIGO</a> 
+</div>
+</footer>
+
+<script>
+$(".mobile-nav-toggle").click(function(){
+$("body").toggleClass("mobile-nav-active");
+$(".mobile-nav-toggle i").toggleClass("fa-bars fa-times");
+});
+</script>
+</body>
+
+</html>
